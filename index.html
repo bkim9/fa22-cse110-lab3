@@ -1,12 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Beomsu Kim">
     <title>meeting</title>
+    <link rel="icon" type="image/x-icon" href="/assets/globe--v2.png">
   </head>
   <body>
+    <header>
       <h1>Meeting Minutes Note</h1>
+      <details>
+        <summary>Meeting Sections</summary>
+        <ol>
+          <li>Introduction of the Meeting</li>
+          <li>Brainstorming</li>
+          <li>Documentation</li>
+          <li>Closing Mention</li>
+        </ol>
+      </details>
+      <nav>
+        <a href="#agenda">Today's Agenda</a> |
+        <a href="#unfinished">Unfinished from Last Meeting</a> |
+        <a href="#new_business">New Business</a> |
+        <a href="#comments">Today's Comments</a> |
+        <a href="#diagrams">Diagrams of today</a> |
+        <a href="#video_record">Video Record of the Meeting</a> |
+        <a href="#audio_record">Audio Record of the Meeting</a>
+      </nav>
+    </header>
+      <main>
       <h2>Date</h2>
       <p id="today">Oct 3rd 09:00</p>
+      <section>
       <h2>Attendance List</h2>
       <ul>
         <li>Patrick</li>
@@ -16,42 +41,114 @@
         <li>Noor</li>
         <li>Eloy</li>
       </ul>
-      <h2>Today's Agenda</h2>
+    </section>
+    <section>
+      <h2 id="agenda">Today's Agenda</h2>
       <ol>
-          <li>Watching WWE</li>
-          <li>ditching a class</li>
-          <li>getting a nice haircut</li>
-          <li>Dstributing roles</li>
+          <li>Watching Recordings for the Project</li>
+          <li>Saying Hi to the <strong>Leader</strong></li>
+          <li>Getting a Nice Report Subject</li>
+          <li>Dstributing <em>Roles</em></li>
       </ol>
-      <h2>Unfinished from Last Meeting</h2>
+    </section>
+    <section>
+      <h2 id="unfinished">Unfinished from Last Meeting</h2>
       <ol>
-        <li>Setting up appointments</li>
-        <li>Recruiting more members</li>
-        <li>What to eat for the dinner meeting</li>
+        <li>Setting up Appointments</li>
+        <li>Recruiting more Members</li>
+        <li>What to Eat For the Dinner Meeting</li>
       </ol>
-      <h2>New Business</h2>
+    </section>
+    <section>
+      <h2 id="new_business">New Business</h2>
       <ul>
-        <li>Deciding a software to use for managing</li>
-        <li>How to make members more interested in the topic</li>
-        <li>Plan for emergency when someone gets COVID-19</li>
+        <li>Deciding a Software For Managing</li>
+        <li>How to Make Members More Interested In the Topic</li>
+        <li>Plan for Emergency When Someone Gets COVID-19</li>
       </ul>
-      <h2>Group's availability</h2>
+    </section>
+    <section>
+      <h2 id="comments">Today's Comments</h2>
+      <ul>
+        <li>Beomsu said that we have to work for how to distribute the role more carefully since there can be an unexpected variable</li>
+        <li>Patrick promised he will bring his friend to the group</li>
+        <li>Curtis said he cannot join next meeting due to time conflict</li>
+      </ul>
+    </section>
+    <section>
+      <h2 id="diagrams">Diagrams of today</h2>
+      <h3>Ways for More Members</h3>
+      <img src="assets/diagramexample.png" width="500" alt="this diagram is a pie graph to show that joining another team is the better option for recruiting members">
+      <h3>Group's availability</h3>
       <img src="assets/when2meet.PNG" width="500" alt="this image describes my availability and that of my group time slots depending on the availability of the members. The color showing the number of students available in the timeslot is greener if there are more students free at the time">
-      <h2>Sample Video</h2>
+    </section>
+    <section>
+      <h2 id="video_record">Video Record of the Meeting</h2>
       <video width="320" height="240" controls>
-        <source src="assets/videosample.mp4" type="video/mp4">
+        <source src="assets/videorecordingsample.mov" type="video/mp4">
         Your browser does not support the video
       </video>
-      <cite>
-        This video is from https://sample-videos.com/
-      </cite>
-      <h2>Sample Audio for Learning Chinese</h2>
-      <audio controls>
-        <source src="assets/soundsample.mp3" type="audio/mp3">
+    </section>  
+    <section>
+      <h2>Audio Record of the Meeting</h2>
+      <audio id="audio_record" controls>
+        <source src="assets/Recording_2.mp3" type="audio/mp3">
         Your browser does not support the audio
       </audio>
-      <cite>
-        This audio is from https://china.hackers.com/
-      </cite>
+    </section>
+    <section>
+      <h2>Team Aplication</h2>
+      <form action="/assets/diagramexample.png" method="get">
+        <fieldset>
+          <legend>Application Form</legend>
+          <label for="fname">First Name:</label>
+          <input type="text" id="fname" name="fname"><br><br>
+          <label for="lname">Last Name:</label>
+          <input type="text" id="lname" name="lname"><br><br>
+          <label for="email">Eamil:</label>
+          <input type="email" id="email" name="email"><br><br>
+          <label for="syears" id="syears" name="syears">Starting Fall 2022 you'll be a</label>
+          <select name="syear" id="syear">
+            <option value="freshman">Freshman</option>
+            <option value="sophomore">Sophomore</option>
+            <option value="junior">Junior</option>
+            <option value="senior">Senior</option>
+            <option value="other">Other</option>
+          </select><br><br>
+          <label for="birthday">Birthday:</label>
+          <input type="date" id="birthday" name="birthday"><br><br>
+          <label for="role">Which role(s) would you like to be considered for?</label>
+          <input list="roles" name="role" id="browser">
+          <datalist id="roles">
+            <option value="Leader"></option>
+            <option value="Member"></option>
+            <option value="Nothing"></option>
+          </datalist><br><br>
+          <input type="submit" value="Submit">
+        </fieldset>
+        
+        First name:
+          <input type = "text" name="first_name" value="" maxlength="100" />
+          <br>
+        Last name:
+          <input type = "text" name="last_name" value="" maxlength="100">
+          <br>
+        Reason for Applying: <br>
+          <textarea id="team_join_reason" name="reason" rows="4" cols="30"></textarea>
+          <br>
+          <input type = "submit" value="Submit">
+          <button>Clear</button>
+      </form>
+    </section>
+  </main>
+    <footer>
+      <hr>
+      <section>
+        <div>
+          Here is a <i>div</i><br>
+          <span>Here is a <b>span</b></span>
+        </div>
+      </section>
+    </footer>
   </body>
 </html>
