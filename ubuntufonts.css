@@ -1,0 +1,57 @@
+:root {
+    margin:0;
+    padding: 0;
+    --my-font-family: ubuntu;
+    font-family: var(--my-font-family), 'Courier New', Courier, monospace;
+    --mobile-rem: 10px;
+}
+
+@font-face {
+    font-family: ubuntuBoldFont;
+    src: url(assets/Ubuntu/Ubuntu-Bold.ttf);
+}
+
+@font-face {
+    font-family: ubuntuBoldItalicFont;
+    src: url(assets/Ubuntu/Ubuntu-BoldItalic.ttf);
+}
+
+@font-face {
+    font-family: ubuntuItalic;
+    src: url(assets/Ubuntu/Ubuntu-Italic.ttf);
+}
+
+@font-face {
+    font-family: ubuntuLight;
+    src: url(assets/Ubuntu/Ubuntu-Light.ttf);
+}
+
+@font-face {
+    font-family: ubuntuLightItalic;
+    src: url(assets/Ubuntu/Ubuntu-LightItalic.ttf);
+}
+
+@font-face {
+    font-family: ubuntuMedium;
+    src: url(assets/Ubuntu/Ubuntu-Medium.ttf);
+}
+
+@font-face {
+    font-family: ubuntuMediumItalic;
+    src: url(assets/Ubuntu/Ubuntu-MediumItalic.ttf);
+}
+
+@font-face {
+    font-family: ubuntu;
+    src: url(assets/Ubuntu/Ubuntu-Regular.ttf);
+}
+
+@media screen and (max-width: 706px) {
+    :root{
+        font-size: var(--mobile-rem);
+    }
+    main {
+        display: flex;
+        flex-direction: column;
+    }
+}
