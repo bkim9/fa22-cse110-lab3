@@ -5,6 +5,7 @@
     <meta name="author" content="Beomsu Kim">
     <title>meeting</title>
     <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
+    <link rel="stylesheet" href="ubuntufonts.css">
     <style>
       /*I personally like warm color so I choose bisque to be my background-color*/
       html {
@@ -17,6 +18,8 @@
       /* header to be flex to arrange them */
       header {
         display: flex;
+        flex-direction: row;
+        flex-wrap:wrap;
         align-items: center;
         justify-content: space-around;
         font-size: 1.4rem; 
@@ -24,8 +27,12 @@
       main {
         display: grid;
         grid-template-columns: 1fr 1fr;
-      }      
-      main > *{
+        grid-template-rows: auto;
+        gap: .3rem;
+        align-items: stretch;
+      }     
+      /* no border lines */
+      main > *{ 
         background-color: #ccc;
         margin: 3pt;
         padding: .7rem;
@@ -36,8 +43,70 @@
       main h2 {
         text-align: center;
       }
+
+      video[width] {
+        aspect-ratio: 400/300;
+        position: static;
+        margin: 0 0 0 20%;
+      }
+      element.applications {
+        margin-top: 2mm;
+        margin-right: auto;
+        margin-bottom: 3%;
+        margin-left: 0cm;
+      }
+      #application1{
+        margin: 0rem 0rem 0rem 0rem;
+        padding-top: .4rem;
+        padding-right: .1rem;;
+        padding-bottom: .3vw;
+        padding-left: 0%;
+      }
+      #application2{
+        margin: 2px 2px 2px 2px;
+        padding: auto;
+      }
+      #fname, #lname, #email, #syears, #birthday, 
+      #fname ~ #role {
+        width: 96.5%;
+        height: 2rem;
+        font-size: x-large;
+        border: none;
+      }
+      #first-name2, #last-name2 {
+        border: dashed blueviolet .1ex;
+      }
+      br + textarea {
+        margin-top: .2rem;
+        border-style: dashed;
+        border-color: blueviolet;
+        border-width: .1ex;
+        border-radius: .5rem;
+        width: 98%;
+      }
+      .application-buttons{
+        display: inline;
+        border-style: none;
+        background-color: blueviolet;
+        padding: 1rem;
+        font-size: large;
+        font-weight: bolder;
+        color:aliceblue;
+        width: 49%;
+        height: auto;
+        max-width: 40rem;
+        max-height: 40rem;
+        border-color:rgb(56, 124, 17);
+        border-width: 0mm;
+        border-radius: .2rem;
+        position: sticky;
+      }
+      .application-buttons:hover{
+        color:yellow;
+      }
       footer {
         text-align: center;
+        font-size: 1rem;
       }
     </style>
   </head>
@@ -55,7 +124,8 @@
       </nav>
     </header>
       <main>
-        <details>
+
+        <details style="display:none;">
           <summary style="text-align: center; font-size: x-large; padding-top: 2ex;"><strong>Meeting Sections</strong></summary>
           <ol>
             <li>Introduction of the Meeting</li>
@@ -129,9 +199,6 @@
       <img src="assets/when2meet.PNG" width="500" alt="this image describes my availability and that of my group time slots depending on the availability of the members. The color showing the number of students available in the timeslot is greener if there are more students free at the time">
     </details>
 
-      
-      
-
     </section>
     <section>
       <h2 id="video_record">Video Record of the Meeting</h2>
@@ -149,7 +216,7 @@
     </section>
     <section>
       <h2>Team Aplication</h2>
-      <form action="/assets/diagramexample.png" method="get">
+      <form action="/assets/diagramexample.png" method="get" id="application1" class="applications">
         <fieldset>
           <legend>Application Form</legend>
           <label for="fname">First Name:</label>
@@ -175,21 +242,22 @@
             <option value="Member"></option>
             <option value="Nothing"></option>
           </datalist><br><br>
-          <input type="submit" value="Submit">
+          <input type="submit" value="Submit" class="application-buttons" style="width: 100%;">
         </fieldset>
-        
-        First name:
-          <input type="text" name="first_name" value="" maxlength="100">
+         </form>
+        <form class="applications" id="application2">
+          First name:
+          <input type="text" name="first_name" value="" maxlength="100" id="first-name2">
           <br>
         Last name:
-          <input type="text" name="last_name" value="" maxlength="100">
+          <input type="text" name="last_name" value="" maxlength="100" id="last-name2">
           <br>
         Reason for Applying: <br>
           <textarea id="team_join_reason" name="reason" rows="4" cols="30"></textarea>
           <br>
-          <input type = "submit" value="Submit">
-          <button>Clear</button>
-      </form>
+          <input type = "submit" value="Submit" class="application-buttons">
+          <button class="application-buttons">Clear</button>
+        </form>
     </section>
   </main>
     <footer>
