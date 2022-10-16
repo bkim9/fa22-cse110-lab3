@@ -5,41 +5,80 @@
     <meta name="author" content="Beomsu Kim">
     <title>meeting</title>
     <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
+    <style>
+      /*I personally like warm color so I choose bisque to be my background-color*/
+      html {
+        background-color: bisque; 
+        font-size: 15px;
+      }
+      h1 {
+        color: rgb(56, 124, 17);
+      }
+      /* header to be flex to arrange them */
+      header {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        font-size: 1.4rem; 
+      }
+      main {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+      }      
+      main > *{
+        background-color: #ccc;
+        margin: 3pt;
+        padding: .7rem;
+        border: none;
+        border-radius: 1.5ch;
+        font-size:larger;
+      }
+      main h2 {
+        text-align: center;
+      }
+      footer {
+        text-align: center;
+      }
+    </style>
   </head>
   <body>
     <header>
       <h1>Meeting Minutes Note</h1>
-      <details>
-        <summary>Meeting Sections</summary>
-        <ol>
-          <li>Introduction of the Meeting</li>
-          <li>Brainstorming</li>
-          <li>Documentation</li>
-          <li>Closing Mention</li>
-        </ol>
-      </details>
       <nav>
-        <a href="#agenda">Today's Agenda</a> |
-        <a href="#unfinished">Unfinished from Last Meeting</a> |
-        <a href="#new_business">New Business</a> |
-        <a href="#comments">Today's Comments</a> |
-        <a href="#diagrams">Diagrams of today</a> |
-        <a href="#video_record">Video Record of the Meeting</a> |
-        <a href="#audio_record">Audio Record of the Meeting</a>
+        <a href="#agenda">Agenda</a> |
+        <a href="#unfinished">Unfinished</a> |
+        <a href="#new_business">New</a> |
+        <a href="#comments">Comments</a> |
+        <a href="#diagrams">Diagrams</a> |
+        <a href="#video_record">Video Records</a> |
+        <a href="#audio_record">Audio Records</a>
       </nav>
     </header>
       <main>
-      <h2>Date</h2>
-      <p id="today">Oct 3rd 09:00</p>
+        <details>
+          <summary style="text-align: center; font-size: x-large; padding-top: 2ex;"><strong>Meeting Sections</strong></summary>
+          <ol>
+            <li>Introduction of the Meeting</li>
+            <li>Brainstorming</li>
+            <li>Documentation</li>
+            <li>Closing Mention</li>
+          </ol>
+        </details>
+      <section>
+        <h2>Date</h2>
+        <p id="today" style="text-align: center">Oct 15th 20:58</p>
+      </section>
       <section>
       <h2>Attendance List</h2>
       <ul>
-        <li>Patrick</li>
-        <li>Curtis</li>
+        <li>Jacob</li>
+        <li>Neal</li>
         <li>Beomsu</li>
-        <li>Haochang</li>
-        <li>Noor</li>
-        <li>Eloy</li>
+        <li>Rita</li>
+        <li>Yaosen</li>
+        <li>Honkun</li>
+        <li>Anh</li>
+        <li>Lucas</li>
       </ul>
     </section>
     <section>
@@ -77,10 +116,22 @@
     </section>
     <section>
       <h2 id="diagrams">Diagrams of today</h2>
-      <h3>Ways for More Members</h3>
+      <details>
+        <summary>
+          <h3>Ways for More Members</h3>
+        </summary>
       <img src="assets/diagramexample.png" width="500" alt="this diagram is a pie graph to show that joining another team is the better option for recruiting members">
-      <h3>Group's availability</h3>
+    </details>
+    <details>
+      <summary>
+        <h3>Group's availability</h3>
+      </summary>
       <img src="assets/when2meet.PNG" width="500" alt="this image describes my availability and that of my group time slots depending on the availability of the members. The color showing the number of students available in the timeslot is greener if there are more students free at the time">
+    </details>
+
+      
+      
+
     </section>
     <section>
       <h2 id="video_record">Video Record of the Meeting</h2>
