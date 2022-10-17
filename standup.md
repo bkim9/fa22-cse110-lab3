@@ -14,3 +14,4 @@ Changes Made
 | ubuntufonts.css| added fonts from google| part2 requirement|
 | ubuntufonts.css| media query enabled | to accomodate users using moblie environments|
 | index.html    | typing effect on title| looking good|
+| ubuntufonts.css| mediaquery to change backgroundcolor | distinguish them|
