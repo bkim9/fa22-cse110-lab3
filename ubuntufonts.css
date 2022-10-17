@@ -50,6 +50,9 @@
     :root{
         font-size: var(--mobile-rem);
     }
+    body {
+        background-color: navy;
+    }
     main {
         display: flex;
         flex-direction: column;
