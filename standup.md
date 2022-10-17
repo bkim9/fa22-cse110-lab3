@@ -13,3 +13,4 @@ Changes Made
 | Ubuntu        | added a font file  | part2 requirement|
 | ubuntufonts.css| added fonts from google| part2 requirement|
 | ubuntufonts.css| media query enabled | to accomodate users using moblie environments|
+| index.html    | typing effect on title| looking good|
